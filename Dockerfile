@@ -1,3 +1,8 @@
-FROM amazoncorretto:11-alpine-jdk
-COPY target/docker-message-server-1.0.0.jar message-server-1.0.0.jar
-ENTRYPOINT ["java","-jar","/message-server-1.0.0.jar"]
+FROM openjdk:8-jre-alpine
+
+EXPOSE 8080
+
+COPY ./build/libs/my-app-1.0-SNAPSHOT.jar /usr/app/
+WORKDIR /usr/app
+
+ENTRYPOINT ["java", "-jar", "my-app-1.0-SNAPSHOT.jar"]
