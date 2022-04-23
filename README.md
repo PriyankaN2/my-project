@@ -1,7 +1,7 @@
 # my-project
 ##### build the project
 
-    ./gradlew build
+    ./gradle build
 
 ##### build Docker image called java-app. Execute from root
 
