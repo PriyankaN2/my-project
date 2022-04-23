@@ -47,5 +47,6 @@ jobs:
       uses: docker/build-push-action@v2
       with:
        context: .
+       image: priya9272/demo-app
        push: true
        tags: user/app:latest
