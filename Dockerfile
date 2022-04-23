@@ -2,7 +2,7 @@ FROM openjdk:8-jre-alpine
 
 EXPOSE 8080
 
-RUN cd CACHED/ && ls
+RUN ls
 COPY . /usr/app/
 WORKDIR /usr/app
 
